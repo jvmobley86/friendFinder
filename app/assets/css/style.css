@@ -32,6 +32,8 @@ h1 {
   letter-spacing: 8px;
 }
 
+
+
 h5 {
   letter-spacing: 3px;
 }
@@ -39,4 +41,10 @@ h5 {
 .hr-light {
   border-top: 3px solid #fff;
   width: 80px;
+}
+.main2{
+  background-color: rgba(255, 255, 255, 0.473);
+  margin-left:75px;
+  margin-top: 75px;
+  
 }

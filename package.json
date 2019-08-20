@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jvmobley86/friendFinder/issues"
   },
-  "homepage": "https://github.com/jvmobley86/friendFinder#readme"
+  "homepage": "https://github.com/jvmobley86/friendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

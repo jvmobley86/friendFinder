@@ -1,1 +1,223 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Full Page Intro -->
+    <div
+        style="background-image: url('https://media1.popsugar-assets.com/files/thumbor/6RUhnK1_AA62OHAq9S69v3w2s44/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2019/07/21/103/n/3019466/8a1727235d351176ea3750.99941037_/i/Best-Friends-Bucket-List.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+            <!-- Content -->
+            <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <form class="form border main2 border-light p-5">
+
+                        <p class="h3 mb-4 text-center">Friend Finder Assessment</p>
+                        <p class="h4 mb-4 text-center">Please select the response that most closely matches how you feel
+                            about each statement.</p>
+
+                        <p class="h4 mb-4">1. I enjoy a very active lifestyle.</p>
+                        <select class="browser-default custom-select custom-select-lg mb-3" id="question1">
+                            <option selected>Choose a Response</option>
+                            <option value="1">Strongly Agree</option>
+                            <option value="2">Moderately Agree</option>
+                            <option value="3">Neither Agree nor Disagree</option>
+                            <option value="4">Moderately Disagree</option>
+                            <option value="5">Strongly Disagree</option>
+                        </select>
+                        <p class="h4 mb-4">2. I enjoy long conversations.</p>
+                        <select class="browser-default custom-select custom-select-lg mb-3" id="question2">
+                            <option selected>Choose a Response</option>
+                            <option value="1">Strongly Agree</option>
+                            <option value="2">Moderately Agree</option>
+                            <option value="3">Neither Agree nor Disagree</option>
+                            <option value="4">Moderately Disagree</option>
+                            <option value="5">Strongly Disagree</option>
+                        </select>
+                        <p class="h4 mb-4">3. I enjoy events with lots of people around.</p>
+                        <select class="browser-default custom-select custom-select-lg mb-3" id="question3">
+                            <option selected>Choose a Response</option>
+                            <option value="1">Strongly Agree</option>
+                            <option value="2">Moderately Agree</option>
+                            <option value="3">Neither Agree nor Disagree</option>
+                            <option value="4">Moderately Disagree</option>
+                            <option value="5">Strongly Disagree</option>
+                        </select>
+                        <p class="h4 mb-4">4. I would rather spend the night alone reading a good book than going out.
+                        </p>
+                        <select class="browser-default custom-select custom-select-lg mb-3" id="question4">
+                            <option selected>Choose a Response</option>
+                            <option value="1">Strongly Agree</option>
+                            <option value="2">Moderately Agree</option>
+                            <option value="3">Neither Agree nor Disagree</option>
+                            <option value="4">Moderately Disagree</option>
+                            <option value="5">Strongly Disagree</option>
+                        </select>
+                        <p class="h4 mb-4">5. I trust new people easily.</p>
+                        <select class="browser-default custom-select custom-select-lg mb-3" id="question5">
+                            <option selected>Choose a Response</option>
+                            <option value="1">Strongly Agree</option>
+                            <option value="2">Moderately Agree</option>
+                            <option value="3">Neither Agree nor Disagree</option>
+                            <option value="4">Moderately Disagree</option>
+                            <option value="5">Strongly Disagree</option>
+                        </select>
+                        <p class="h4 mb-4">6. I consider myself an extrovert.</p>
+                        <select class="browser-default custom-select custom-select-lg mb-3" id="question6">
+                            <option selected>Choose a Response</option>
+                            <option value="1">Strongly Agree</option>
+                            <option value="2">Moderately Agree</option>
+                            <option value="3">Neither Agree nor Disagree</option>
+                            <option value="4">Moderately Disagree</option>
+                            <option value="5">Strongly Disagree</option>
+                        </select>
+                        <p class="h4 mb-4">7. Most of my friends confide in me and ask for my advice.</p>
+                        <select class="browser-default custom-select custom-select-lg mb-3" id="question7">
+                            <option selected>Choose a Response</option>
+                            <option value="1">Strongly Agree</option>
+                            <option value="2">Moderately Agree</option>
+                            <option value="3">Neither Agree nor Disagree</option>
+                            <option value="4">Moderately Disagree</option>
+                            <option value="5">Strongly Disagree</option>
+                        </select>
+                        <p class="h4 mb-4">8. I meet people everywhere I go.</p>
+                        <select class="browser-default custom-select custom-select-lg mb-3" id="question8">
+                            <option selected>Choose a Response</option>
+                            <option value="1">Strongly Agree</option>
+                            <option value="2">Moderately Agree</option>
+                            <option value="3">Neither Agree nor Disagree</option>
+                            <option value="4">Moderately Disagree</option>
+                            <option value="5">Strongly Disagree</option>
+                        </select>
+                        <p class="h4 mb-4">9. I think most people take themselves too seriously.</p>
+                        <select class="browser-default custom-select custom-select-lg mb-3" id="question9">
+                            <option selected>Choose a Response</option>
+                            <option value="1">Strongly Agree</option>
+                            <option value="2">Moderately Agree</option>
+                            <option value="3">Neither Agree nor Disagree</option>
+                            <option value="4">Moderately Disagree</option>
+                            <option value="5">Strongly Disagree</option>
+                        </select>
+                        <p class="h4 mb-4">10. If I had the chance to travel, I'd jump in an instant.</p>
+                        <select class="browser-default custom-select custom-select-lg mb-3" id="question10">
+                            <option selected>Choose a Response</option>
+                            <option value="1">Strongly Agree</option>
+                            <option value="2">Moderately Agree</option>
+                            <option value="3">Neither Agree nor Disagree</option>
+                            <option value="4">Moderately Disagree</option>
+                            <option value="5">Strongly Disagree</option>
+                        </select>
+                        <!-- Button trigger modal -->
+                        <button id="submit" type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#basicExampleModal">
+                            Launch demo modal
+                        </button>
+
+
+                    </form>
+
+
+                    <!--Grid column-->
+                </div>
+
+                <!--Grid row-->
+
+            </div>
+
+            <!-- Content -->
+        </div>
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Scripts-->
+    <!-- ​
+    <script type="text/javascript">
+        $("#submit").on("click", function (event) {
+            event.preventDefault()
+            console.log(data)
+            function validateForm() {
+                var isValid = true;
+                $(".form").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                $("custom-select-lg").each(function () {
+                    if ($(this).val() === "") {
+                        isVlaid = false;
+                    }
+                });
+                return isValid;
+            }
+            if (validateForm()) {
+                var userData = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#question1").val(),
+                        $("#question2").val(),
+                        $("#question3").val(),
+                        $("#question4").val(),
+                        $("#question5").val(),
+                        $("#question6").val(),
+                        $("#question7").val(),
+                        $("#question8").val(),
+                        $("#question9").val(),
+                        $("#question10").val()
+                    ]
+                };
+                var currentURL = window.location.origin;
+                $.post(currentURL + "app/data/friends.js", userData, function (data) {
+                    $("#matchName").text(data.name);
+                    $("#matchImg").attr("src", data.photo);
+                    $("#resultsModal").modal("toggle");
+
+                });
+            }
+            else {
+                alert("Please fill out all the fields!")
+            }
+            return false;
+        });
+
+
+    </script> -->
+
+</body>
+
+</html>
