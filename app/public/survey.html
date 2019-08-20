@@ -6,10 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
+    <style>
+        .main2 {
+            background-color: rgba(255, 255, 255, 0.473);
+            margin-left: 75px;
+            margin-top: 75px;
+
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -27,7 +37,13 @@
                     <form class="form border main2 border-light p-5">
 
                         <p class="h3 mb-4 text-center">Friend Finder Assessment</p>
-                        <p class="h4 mb-4 text-center">Please select the response that most closely matches how you feel
+                        <p class="h4 mb-4">About You</p>
+                        <p class="h4">Name (Required) </p>
+                        <input type="text" id="name" class="form-control" required>
+                        <p class="h4">Link to Image (Required) </p>
+                        <input type="text" id="photo" class="form-control" required>
+                        <br>
+                        <p class="h4 mb-4">Please select the response that most closely matches how you feel
                             about each statement.</p>
 
                         <p class="h4 mb-4">1. I enjoy a very active lifestyle.</p>
@@ -122,10 +138,10 @@
                             <option value="5">Strongly Disagree</option>
                         </select>
                         <!-- Button trigger modal -->
-                        <button id="submit" type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#basicExampleModal">
-                            Launch demo modal
+                        <button type="button" id="submit" class="btn btn-dark">
+                            Find My Match!
                         </button>
+
 
 
                     </form>
@@ -143,43 +159,45 @@
 
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Your ideal friend is:</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <h4 id="matchName">
+                        <img id="matchImg" src="" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!--Scripts-->
-    <!-- ​
+
+    <!-- Scripts-->
+
     <script type="text/javascript">
         $("#submit").on("click", function (event) {
             event.preventDefault()
-            console.log(data)
+            console.log("submit form")
             function validateForm() {
                 var isValid = true;
-                $(".form").each(function () {
+                // $(".form").each(function () {
+                //     if ($(this).val() === "") {
+                //         console.log($(this).val())
+                //         isValid = false;
+                //     }
+                // });
+                $(".custom-select-lg").each(function () {
                     if ($(this).val() === "") {
                         isValid = false;
-                    }
-                });
-                $("custom-select-lg").each(function () {
-                    if ($(this).val() === "") {
-                        isVlaid = false;
                     }
                 });
                 return isValid;
@@ -202,21 +220,27 @@
                     ]
                 };
                 var currentURL = window.location.origin;
-                $.post(currentURL + "app/data/friends.js", userData, function (data) {
-                    $("#matchName").text(data.name);
-                    $("#matchImg").attr("src", data.photo);
-                    $("#resultsModal").modal("toggle");
+                console.log(userData)
+                $.post("/api/friends", userData, function (data) {
+                    if (data) {
+                        alert("Yay! Your ideal friend is: Chantel!");
+                    }
+                    else {
+                        alert("Sorry you don't have a match at this time.");
+                    }
+
 
                 });
+                
             }
             else {
-                alert("Please fill out all the fields!")
-            }
-            return false;
+            alert("Please fill out all the fields!")
+        }
+        return false;
         });
 
 
-    </script> -->
+    </script>
 
 </body>
 

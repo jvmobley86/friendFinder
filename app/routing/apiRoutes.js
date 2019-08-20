@@ -30,6 +30,7 @@ module.exports = function(app) {
                 }
         }
         friends.push(userData);
-        res.json(match);
+        res.json(match); 
+       
     });
 }
