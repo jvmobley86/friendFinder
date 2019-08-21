@@ -5,10 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder</title>
+    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
+   <style>
+   html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #78909c !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+ 
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #78909c !important;
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+}
+
+
+
+h5 {
+  letter-spacing: 3px;
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
+}
+.main2{
+  background-color: rgba(255, 255, 255, 0.473);
+  margin-left:75px;
+  margin-top: 75px;
+  
+}
+
+   </style>
 </head>
 <body>
     
@@ -27,7 +81,7 @@
             <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Answer a few questions to</strong></h5>
             <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>get matched with a new friend today.</strong></h5>
 
-            <a href="./survey.html" class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Begin Assessment</a>
+            <a href="survey" class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Begin Assessment</a>
              
           </div>
           <!--Grid column-->
